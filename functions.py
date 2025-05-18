@@ -22,15 +22,13 @@ def empty_col_draw(col):
         st.write('')
 
 
-def send_email(message):
+def send_email(receiver, message):
     host = 'smtp.gmail.com'
     port = 465
     context = ssl.create_default_context()
 
     gmail_user = 'gsp672021@gmail.com'
     app_password = 'gbiylefkztnirvyh'
-
-    receiver = 'gritsun.sp@gmail.com'
 
     with smtplib.SMTP_SSL(host, port, context=context) as server:
         server.login(gmail_user, app_password)
